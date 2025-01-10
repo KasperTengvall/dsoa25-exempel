@@ -1,12 +1,32 @@
 public class Main {
-
     public static void main(String[] args) {
 
+        // Upcasting
+        Vehicle car = new Car("Toyota", 5000);
+        Vehicle bike = new Bike("Scott");
 
-        Car car = new Car("Toyota");
-        Bike bike = new Bike("Scott");
+        Car car2 = new Car("Fiat");
+        car2.refuel();
 
-        System.out.println(car.getName() + " is " + car.getType());
+        Vehicle todaysVehicle;
+        todaysVehicle = car;
+
+        todaysVehicle = bike;
+
+        System.out.println("i dag åker jag " + todaysVehicle.getName());
+
+        //car.setPrice(-1000.0);
+
+        System.out.printf("%s kostar %.2f\n", car.getName(), car.getPrice());
+        System.out.printf("%s is %s\n", car.getName(), car.getType());
+        System.out.println(car.soundWarning());
+
+        System.out.printf("%s kostar %.2f\n", car2.getName(), car2.getPrice());
+
+
+
         System.out.println(bike.getName() + " is " + bike.getType());
+        System.out.println(bike.soundWarning());
+
     }
 }
