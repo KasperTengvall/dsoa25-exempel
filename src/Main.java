@@ -11,6 +11,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
+        new CCRandomRundown();
 
         BikeShop shop = new BikeShop();
         shop.addBike(new Bike("Scott", 600));
